@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+ul li:hover {
+  background: #ddd;
+}
+#todolist {
+  background-color: #58f086;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+  padding-bottom: 70px;
+}
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+
+  float: left;
+  font-size: 16px;
+}
+
+span {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+span:hover {
+  background-color: rgb(61, 134, 71);
+}
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+.task_item {
+  display: flex;
+  justify-content: space-between;
+}
